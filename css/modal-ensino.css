@@ -1,0 +1,199 @@
+/* ===== ADICIONE NO FINAL DO SEU css/style.css ===== */
+
+/* Cards clicáveis */
+.card[data-modal] {
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+
+.card[data-modal]:focus-visible {
+  outline: 3px solid #1a7cff;
+  outline-offset: 3px;
+}
+
+.card[data-modal]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .3);
+
+
+}
+
+.card .ver-mais {
+  display: inline-block;
+  margin-top: 12px;
+  color: #1a7cff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Janela dos tipos de ensino (nomes próprios para não conflitar com o modal da Área do Aluno) */
+dialog.modal-ensino {
+  border: 0;
+  border-radius: 14px;
+  padding: 0;
+  width: min(560px, 92vw);
+  max-height: 88vh;
+  overflow: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .3);
+  margin: auto;
+  inset: 0;
+}
+
+dialog.modal-ensino::backdrop {
+  background: rgba(13, 35, 64, .6);
+}
+
+dialog.modal-ensino[open] {
+  animation: me-abre .22s ease-out;
+}
+
+@keyframes me-abre {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.me-topo {
+  border-top: 5px solid var(--amarelo);
+  padding: 26px 28px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.me-topo h3 {
+  margin: 0;
+  color: #0d2340;
+  font-size: 22px;
+}
+
+.me-fechar {
+  border: 0;
+  background: #eef2f7;
+  color: #0d2340;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  flex: none;
+}
+
+.me-fechar:hover {
+  background: #dde5ef;
+}
+
+.me-fechar:focus-visible {
+  outline: 3px solid #1a7cff;
+}
+
+.me-corpo {
+  padding: 8px 28px 28px;
+  line-height: 1.55;
+  color: #444;
+  text-align: left;
+}
+
+.me-corpo h4 {
+  color: #0d2340;
+  margin: 20px 0 8px;
+  font-size: 16px;
+}
+
+.me-corpo ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.me-corpo li {
+  margin-bottom: 6px;
+}
+
+.me-corpo table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.me-corpo th,
+.me-corpo td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid #e3e8ef;
+}
+
+.me-corpo th {
+  color: #0d2340;
+  font-size: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  dialog.modal-ensino[open] {
+    animation: none;
+  }
+}
+
+/* Aviso de requisito (ex.: cursos técnicos a partir do 2º ano) */
+.me-aviso {
+  margin: 12px 0 0;
+  padding: 10px 14px;
+  background: #eef5ff;
+  border-left: 4px solid #F5C542;
+  border-radius: 6px;
+  color: #0d2340;
+  font-size: 15px;
+}
+
+/* Filtro de cursos dentro do modal */
+.me-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.me-filtro {
+  font: inherit;
+  font-size: 14px;
+  border: 1px solid #c9d6e8;
+  background: #fff;
+  color: #0d2340;
+  padding: 7px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+
+.me-filtro:hover {
+  background: #eef5ff;
+}
+
+.me-filtro:focus-visible {
+  outline: 3px solid #1a7cff;
+  outline-offset: 2px;
+}
+
+.me-filtro.ativo {
+  background: var(--azul-marinho);
+  border-color: #1a7cff;
+  color: #fff;
+}
+
+.me-curso {
+  margin-top: 8px;
+  padding-top: 4px;
+  border-top: 1px solid #e3e8ef;
+}
+
+.me-curso[hidden] {
+  display: none;
+}

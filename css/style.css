@@ -324,6 +324,39 @@ hr{
     color: #0c2340;
 }
 
+/*Infraestrutura*/
+.section-Infra{
+    padding: 5rem 5%;
+}
+
+.container-Infra {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card-infra{
+    background: white;
+    flex: 1;
+    min-width: 280px;
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid #F5C542;
+    color: #000000;
+}
+
+.card-img{
+    object-fit: cover;
+    
+}
+
+.card-img img{
+   border-radius: 10px;
+    
+}
 /*QUEM SOMOS*/
 .about-section {
     background-color: #0c2340;

@@ -25,13 +25,13 @@ formulario.addEventListener("submit", function(event) {
 
 // ÁREA DO ALUNO
 
-const btnAluno = document.querySelector("#btn-aluno");
+const btnAutorizado = document.querySelector(".area-restrita");
 const modalAluno = document.querySelector("#modal-aluno");
 const fecharModal = document.querySelector("#fechar-modal");
 const btnEntrar = document.querySelector("#btn-entrar");
 
 // ABRIR A JANELA
-btnAluno.addEventListener("click", function(event) {
+btnAutorizado.addEventListener("click", function(event) {
 //click => Espera o usuário clicar no botão
     event.preventDefault();
 

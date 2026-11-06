@@ -8,8 +8,8 @@
 
 :root {
     /* Cores principais */
-    --azul-marinho: #173B65;
-    --azul-claro: #77B7E5;
+    --azul-marinho: #0a052e;
+    --azul-claro: #0b1352;
 
     /* Cores de destaque */
     --amarelo: #F5C542;
@@ -41,9 +41,9 @@
 body {
     background-color: #fcfcfc;
     color: #fdfdfd;
-     background-image: 
-                radial-gradient(circle at 10% 20%, rgba(128, 12, 237, 0.156) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(116, 13, 234, 0.095) 0%, transparent 40%);
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(128, 12, 237, 0.156) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(116, 13, 234, 0.095) 0%, transparent 40%);
 }
 
 h2 {
@@ -172,15 +172,15 @@ h2 {
     box-shadow:
         0 3px 10px rgba(0, 0, 0, 0.15),
         0 0 10px rgba(245, 197, 66, 0.12);
-        
-    transition:  ease all 0.2s;
+
+    transition: ease all 0.2s;
 
 }
 
 .btn-portal:hover {
     background-color: #FFD65C;
 
-    transform:scale(1.02);
+    transform: scale(1.02);
 
     box-shadow:
         0 5px 15px rgba(0, 0, 0, 0.18),
@@ -282,13 +282,14 @@ h2 {
     transform: translateY(2px) scale(1.02);
 }
 
-hr{
-    background-color:  #617077;
-    border: solid 0.5px ;
+hr {
+    background-color: #617077;
+    border: solid 0.5px;
     opacity: 40%;
     border-radius: 5px;
     margin: 50px;
 }
+
 /* SEÇÃO DE CARDS (ENSIN0) */
 .cards-section {
     padding: 5rem 5%;
@@ -365,13 +366,13 @@ hr{
     font-size: 1rem;
 }
 
-select{
+select {
     padding: 4px;
     border: 1px solid #ccc;
     /*borda*/
     border-radius: 30px;
     font-size: 1rem;
-     appearance: none;
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 
@@ -384,26 +385,26 @@ select{
 }
 
 .btn-submit {
-    color: #0c2340;
     border-radius: 40px;
+    background-color: var(--azul-marinho);
     box-shadow:
         0 4px 10px rgba(0, 0, 0, 0.18),
         0 0 15px rgba(245, 197, 66, 0.30),
         inset 0 1px 2px rgba(255, 255, 255, 0.45);
-    transition: background 0.3s, ease transform 0.4s;
-    background-color: #0c2340;
+
     color: white;
     padding: 1rem;
     border: none;
     font-size: 1.1rem;
     font-weight: bold;
-        letter-spacing: 0.2px;
+    letter-spacing: 0.2px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, ease transform 0.4s;
+
 }
 
 .btn-submit:hover {
-    background-color: #00346a;
+    background-color: var(--azul-claro);
     /* Define a cor de fundo do elemento */
 }
 
@@ -415,10 +416,30 @@ select{
     /* Define a cor do texto */
     text-align: center;
     /* Centraliza o texto */
-    padding: 2rem;
+    padding: 1rem;
     /* Adiciona um espaço interno */
     font-size: 0.9rem;
     /* Define o tamanho da fonte */
+}
+
+.footer .area-restrita {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+}
+
+.area-restrita span {
+    text-transform: uppercase;
+    color: #ffffff96;
+    letter-spacing: 0.5px;
+}
+
+.area-restrita span:hover {
+    color: #ffffffb7;
+    cursor: pointer;
 }
 
 /*WHATSAPP FLUTUANTE*/

@@ -157,7 +157,7 @@ h2 {
 }
 
 
-/* ===== BOTÃO ÁREA DO ALUNO ===== */
+/* ===== BOTÃO Sala do Futuro ===== */
 
 .btn-portal {
     display: inline-flex;
@@ -421,14 +421,14 @@ hr {
 
 /*QUEM SOMOS*/
 .about-section {
-    background-color: #246ec9;
-    color: white;
+    background-color: #888f985f;
+    color: rgb(65, 64, 64);
     padding: 5rem 5%;
     text-align: center;
 }
 
 .about-section h2 {
-    color: white;
+    color: var(--azul-marinho);
 }
 
 .about-content {
@@ -541,31 +541,12 @@ hr {
     /* Define a cor do texto */
     text-align: center;
     /* Centraliza o texto */
-    padding: 1rem;
+    padding: 2rem;
     /* Adiciona um espaço interno */
     font-size: 0.9rem;
     /* Define o tamanho da fonte */
 }
 
-.footer .area-restrita {
-    margin-top: 1rem;
-    font-size: 0.8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: end;
-}
-
-.area-restrita span {
-    text-transform: uppercase;
-    color: #ffffff96;
-    letter-spacing: 0.5px;
-}
-
-.area-restrita span:hover {
-    color: #ffffffb7;
-    cursor: pointer;
-}
 
 /*WHATSAPP FLUTUANTE*/
 .btn-whatsapp {

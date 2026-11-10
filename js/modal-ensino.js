@@ -21,69 +21,6 @@ function iniciarModais() {
   });
 }
 
-// Área do Aluno (janela de login)
-function iniciarModalAluno() {
-  var btnAutorizado = document.querySelector(".area-restrita");
-  var modalAluno = document.querySelector("#modal-aluno");
-  var fecharModal = document.querySelector("#fechar-modal");
-  var btnEntrar = document.querySelector("#btn-entrar");
-  var campoUsuario = document.querySelector("#usuario");
-  var campoSenha = document.querySelector("#senha");
-
-  // Se algum elemento não existir (ex.: modais.html não carregou), não faz nada e não dá erro
-  if (!btnAutorizado || !modalAluno || !fecharModal || !btnEntrar || !campoUsuario || !campoSenha) return;
-
-  function abrir() {
-    modalAluno.style.display = "flex"; // flex => mostra a janela modal
-    campoUsuario.focus();
-  }
-
-  function fechar() {
-    modalAluno.style.display = "none";
-    campoSenha.value = ""; // não deixa a senha digitada na tela
-  }
-
-  function entrar() {
-    var usuario = campoUsuario.value.trim();
-    var senha = campoSenha.value;
-
-    // ATENÇÃO: esta verificação roda no navegador, então qualquer pessoa consegue ver
-    // o usuário e a senha no código-fonte. Serve só como demonstração. Para proteger
-    // algo de verdade, a validação precisa ser feita em um servidor.
-    if (usuario === "aluno" && senha === "1234") {
-      alert("Login realizado com sucesso!");
-      fechar();
-    } else {
-      alert("Usuário ou senha incorretos!");
-    }
-  }
-
-  // Abrir (clique ou teclado: Enter / Espaço)
-  btnAutorizado.addEventListener("click", function (event) {
-    event.preventDefault();
-    abrir();
-  });
-  btnAutorizado.addEventListener("keydown", function (e) {
-    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); abrir(); }
-  });
-
-  // Fechar: X, clique no fundo escuro ou tecla Esc
-  fecharModal.addEventListener("click", fechar);
-  fecharModal.addEventListener("keydown", function (e) {
-    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); fechar(); }
-  });
-  modalAluno.addEventListener("click", function (e) { if (e.target === modalAluno) fechar(); });
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && modalAluno.style.display === "flex") fechar();
-  });
-
-  // Entrar: botão ou Enter dentro dos campos
-  btnEntrar.addEventListener("click", entrar);
-  [campoUsuario, campoSenha].forEach(function (campo) {
-    campo.addEventListener("keydown", function (e) { if (e.key === "Enter") entrar(); });
-  });
-}
-
 // Filtro de cursos dentro do modal (funciona em qualquer modal que tenha .me-filtros)
 function iniciarFiltros() {
   document.querySelectorAll('dialog.modal-ensino').forEach(function (modal) {
@@ -126,5 +63,4 @@ function iniciarFiltros() {
 carregarModais().then(function () {
   iniciarModais();
   iniciarFiltros();
-  iniciarModalAluno();
 });

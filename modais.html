@@ -1,0 +1,181 @@
+  <!--Incluir essa parte do código-->
+    <!--ÁREA DO ALUNO -->
+    <div id="modal-aluno" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-aluno-t"> <!-- Cria a janela da Área do Aluno -->
+
+        <div class="modal-conteudo"> <!-- Conteúdo que fica dentro da janela -->
+
+            <span id="fechar-modal" class="fechar" role="button" tabindex="0" aria-label="Fechar">&times;</span> <!-- Botão X para fechar o modal -->
+
+            <h2 id="modal-aluno-t">Área do Aluno</h2> <!-- Título da janela -->
+
+            <input type="text" id="usuario" placeholder="Digite seu usuário" aria-label="Usuário" autocomplete="username"> <!-- Campo para digitar o usuário -->
+
+            <input type="password" id="senha" placeholder="Digite sua senha" aria-label="Senha" autocomplete="current-password"> <!-- Campo para digitar a senha -->
+
+            <button id="btn-entrar" type="button"> <!-- Botão para entrar -->
+                Entrar
+            </button>
+
+        </div>
+
+    </div>
+
+    <!--
+      =====================================================
+      NOVO: JANELAS (MODAIS) DOS TIPOS DE ENSINO
+      Edite os textos com os dados reais da escola (marcados com EDITE)
+      =====================================================
+    -->
+
+    <dialog id="modal-tecnico" class="modal-ensino" aria-labelledby="modal-tecnico-t">
+        <div class="me-topo">
+            <h3 id="modal-tecnico-t">Ensino Técnico</h3>
+            <button type="button" class="me-fechar" aria-label="Fechar">&times;</button>
+        </div>
+        <div class="me-corpo">
+            <p class="me-aviso">Os cursos técnicos são oferecidos a partir do <strong>2º ano</strong> do Ensino Médio.
+            </p>
+            <!-- NOVO: botões de filtro. data-filtro deve ser igual ao data-curso da área correspondente -->
+            <div class="me-filtros" role="group" aria-label="Filtrar por curso">
+                <button type="button" class="me-filtro ativo" data-filtro="todos" aria-pressed="true">Todos</button>
+                <button type="button" class="me-filtro" data-filtro="informatica"
+                    aria-pressed="false">Informática</button>
+                <button type="button" class="me-filtro" data-filtro="administracao"
+                    aria-pressed="false">Administração</button>
+                <button type="button" class="me-filtro" data-filtro="logistica" aria-pressed="false">Logística</button>
+            </div>
+
+            <!-- EDITE: uma área (me-curso) para cada curso. Copie e cole para adicionar outro,
+                 e crie também o botão correspondente acima -->
+            <div class="me-curso" data-curso="informatica">
+                <h4>Técnico em Informática</h4>
+                <ul>
+                    <li><strong>Período:</strong> Manhã e Tarde</li>
+                    <li><strong>Duração:</strong> 2 anos (2º e 3º ano)</li>
+                    <li><strong>Sobre o curso:</strong> Introdução à programação, redes e manutenção de computadores.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="me-curso" data-curso="administracao">
+                <h4>Técnico em Administração</h4>
+                <ul>
+                    <li><strong>Período:</strong> Manhã e Tarde</li>
+                    <li><strong>Duração:</strong> 2 anos (2º e 3º ano)</li>
+                    <li><strong>Sobre o curso:</strong> Rotinas administrativas, finanças, vendas e gestão de pessoas.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="me-curso" data-curso="logistica">
+                <h4>Técnico em Logística</h4>
+                <ul>
+                    <li><strong>Período:</strong> Tarde</li>
+                    <li><strong>Duração:</strong> 2 anos (2º e 3º ano)</li>
+                    <li><strong>Sobre o curso:</strong> Gestão de estoques, armazenamento, transporte, distribuição de
+                        mercadorias, compras e planejamento de processos logísticos.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="modal-medio" class="modal-ensino" aria-labelledby="modal-medio-t">
+        <div class="me-topo">
+            <h3 id="modal-medio-t">Ensino Médio</h3>
+            <button type="button" class="me-fechar" aria-label="Fechar">&times;</button>
+        </div>
+        <div class="me-corpo">
+            <h4>Período oferecido</h4>
+            <ul>
+                <li>Manhã: 7h30 às 12h30 <!-- EDITE --></li>
+                <li>Tarde: 13h30 às 18h30 <!-- EDITE --></li>
+                <li>Noite: 19h às 22h30 <!-- EDITE --></li>
+            </ul>
+            <h4>Duração</h4>
+            <ul>
+                <li>3 anos (1ª a 3ª série) <!-- EDITE --></li>
+            </ul>
+        </div>
+    </dialog>
+
+    <dialog id="modal-eja" class="modal-ensino" aria-labelledby="modal-eja-t">
+        <div class="me-topo">
+            <h3 id="modal-eja-t">Educação de Jovens e Adultos (EJA)</h3>
+            <button type="button" class="me-fechar" aria-label="Fechar">&times;</button>
+        </div>
+        <div class="me-corpo">
+            <h4>Período oferecido</h4>
+            <ul>
+                <li>Noite: 19h às 22h30 <!-- EDITE --></li>
+            </ul>
+            <h4>Etapas</h4>
+            <ul>
+                <li>EJA Médio <!-- EDITE --></li>
+            </ul>
+            <h4>Duração</h4>
+            <ul>
+                <li>3 anos (1ª a 3ª série) <!-- EDITE --></li>
+            </ul>
+            <h4>Para quem é</h4>
+            <ul>
+                <li>Jovens e adultos que não concluíram os estudos na idade regular.</li>
+            </ul>
+        </div>
+    </dialog>
+
+    <dialog id="modal-cel" class="modal-ensino" aria-labelledby="modal-cel-t" style="border-color: var(--amarelo);">
+        <div class="me-topo">
+            <h3 id="modal-cel-t">Centro de Línguas (CEL)</h3>
+            <button type="button" class="me-fechar" aria-label="Fechar">&times;</button>
+        </div>
+        <div class="me-corpo">
+            <p class="me-aviso">Os cursos são oferecidos para todos os alunos da rede estadual, a partir do 7º ano do
+                Ensino Fundamental e no Ensino Médio.
+            </p>
+            <!-- NOVO: botões de filtro. data-filtro deve ser igual ao data-curso da área correspondente -->
+            <div class="me-filtros" role="group" aria-label="Filtrar por curso">
+                <button type="button" class="me-filtro ativo" data-filtro="todos" aria-pressed="true">Todos</button>
+                <button type="button" class="me-filtro" data-filtro="ingles" aria-pressed="false">Inglês</button>
+                <button type="button" class="me-filtro" data-filtro="espanhol" aria-pressed="false">Espanhol</button>
+                <button type="button" class="me-filtro" data-filtro="frances" aria-pressed="false">Francês</button>
+            </div>
+
+            <!-- EDITE: uma área (me-curso) para cada curso. Copie e cole para adicionar outro,
+                 e crie também o botão correspondente acima -->
+            <div class="me-curso" data-curso="ingles">
+                <h4>Inglês</h4>
+                <ul>
+                    <li><strong>Dias da semana:</strong> seg, qua, sex e sáb</li>
+                    <li><strong>Período:</strong> Noite</li>
+                    <li><strong>Duração:</strong> 2 anos (2º e 3º ano)</li>
+                    <li><strong>Sobre o curso:</strong> Curso de língua inglesa com foco em compreensão e comunicação oral e escrita. <!-- EDITE --></li>
+                </ul>
+            </div>
+
+            <div class="me-curso" data-curso="espanhol">
+                <h4>Espanhol</h4>
+                <ul>
+                    <li><strong>Dias da semana:</strong> seg, qua, sex e sáb</li>
+                    <li><strong>Período:</strong> Tarde</li>
+                    <li><strong>Duração:</strong> 2 anos (2º e 3º ano)</li>
+                    <li><strong>Sobre o curso:</strong> Curso de língua espanhola com foco em compreensão e comunicação oral e escrita. <!-- EDITE --></li>
+                </ul>
+            </div>
+
+            <div class="me-curso" data-curso="frances">
+                <h4>Francês</h4>
+                <ul>
+                    <li><strong>Dias da semana:</strong> seg, qua, sex e sáb</li>
+                    <li><strong>Período:</strong> Noite</li>
+                    <li><strong>Duração:</strong> 2 anos (2º e 3º ano)</li>
+                    <li><strong>Sobre o curso:</strong> Curso de língua francesa com foco em compreensão e comunicação oral e escrita. <!-- EDITE --></li>
+                </ul>
+            </div>
+            <div class="me-aviso" style="border-color: var(--azul-marinho);">
+                <p>Site: <a href="https://celdompedro.wixsite.com/" target="_blank" rel="noopener noreferrer">celdompedro.wixsite.com</a></p>
+
+                <p>Email: <a href="mailto:celdompedro@gmail.com">celdompedro@gmail.com</a></p>
+            </div>
+        </div>
+    </dialog>

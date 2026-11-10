@@ -60,7 +60,7 @@ dialog.modal-ensino[open] {
 }
 
 .me-topo {
-  border-top: 5px solid var(--amarelo);
+  border-top: 5px solid var(--azul-marinho);
   padding: 26px 28px 8px;
   display: flex;
   justify-content: space-between;
@@ -142,13 +142,25 @@ dialog.modal-ensino[open] {
 
 /* Aviso de requisito (ex.: cursos técnicos a partir do 2º ano) */
 .me-aviso {
-  margin: 12px 0 0;
+  margin: 25px 0 0;
   padding: 10px 14px;
   background: #eef5ff;
   border-left: 4px solid #F5C542;
   border-radius: 6px;
   color: #0d2340;
   font-size: 15px;
+  font-weight: 600;
+ 
+
+
+}
+
+.me-aviso p {
+  margin: 5px;
+}
+.me-aviso a {
+  color: #1a7cff;
+  text-decoration: underline;
 }
 
 /* Filtro de cursos dentro do modal */
@@ -196,4 +208,94 @@ dialog.modal-ensino[open] {
 
 .me-curso[hidden] {
   display: none;
+}
+
+
+/* ÁREA DO ALUNO */
+.modal {
+    /*Criar uma janela que fica sobre toda a página e centralizar seu conteúdo.*/
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /*Largura*/
+    height: 100%;
+    /*Altura*/
+    background-color: rgba(0, 0, 0, 0.6);
+    /*Cor de fundo*/
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    /*cantos arredondados*/
+    width: 90%;
+    /*Largura*/
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-conteudo h2 {
+    margin-bottom: 1.5rem;
+}
+
+.modal-conteudo input {
+    width: 100%;
+    /*Largura*/
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    /*Borda*/
+    border-radius: 5px;
+    /*cantos arredondados*/
+}
+
+#btn-entrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+
+    background-color: #F5C542;
+    color: #0c2340;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    border-radius: 40px;
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.18),
+        0 0 15px rgba(245, 197, 66, 0.30),
+        inset 0 1px 2px rgba(255, 255, 255, 0.45);
+    transition: background 0.3s, ease transform 0.4s;
+}
+
+#btn-entrar:hover {
+ box-shadow:
+        0 7px 18px rgba(0, 0, 0, 0.22),
+        0 0 22px rgba(245, 197, 66, 0.45),
+        inset 0 1px 3px rgba(255, 255, 255, 0.55);
+
+    transform:  scale(1.03);
+}
+
+.fechar {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    color:  var(--azul-marinho);
 }

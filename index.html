@@ -4,14 +4,11 @@
 <head> <!-- inicia o que vai ficar oculto na página -->
     <meta charset="UTF-8"> <!--configuração para acentuação e cedilha -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Escola Estadual Dom Pedro I - Ensino Médio, Ensino Técnico, EJA e Centro de Línguas (CEL) em São Miguel Paulista, São Paulo.">
     <title>Escola: Dom Pedro I</title> <!--Define o título da página -->
     <link rel="stylesheet" href="./css/style.css"> <!--liga ao arquivo CSS -->
     <!-- no <head>, logo abaixo do link do style.css -->
     <link rel="stylesheet" href="./css/modal-ensino.css">
-
-
-    <!--Ícones do Google-->
-    <link rel="stylesheet" href="https://googleapis.com"> <!--faz referência ao site -->
 </head>
 
 <!--CABEÇALHO-->
@@ -19,31 +16,31 @@
 <body> <!-- tudo que vai ser mostrado na página -->
     <header class="header"> <!-- cabeçalho da página -->
         <div class="logo">
-            
-            <img class="img-logo" src="./img/Brasão Naval com Coroa e Louros.png" alt="">
 
-        
-            <p>Dom pedro I</p>
+            <img class="img-logo" src="./img/Brasão Naval com Coroa e Louros.png" alt="Brasão da Escola Dom Pedro I">
+
+
+            <p>Dom Pedro I</p>
         </div>
         <nav class="nav">
             <a href="#quem-somos">Quem Somos</a>
             <a href="#niveis">Ensino</a>
             <a href="#infra">Infraestrutura</a>
             <a href="#contato">Contato</a>
-            <a href="https://saladofuturo.educacao.sp.gov.br/" target="_blank"  class="btn-portal" id="btn-aluno">Sala do futuro</a>
+            <a href="https://saladofuturo.educacao.sp.gov.br/" target="_blank" rel="noopener noreferrer" class="btn-portal" id="btn-aluno">Sala do
+                futuro</a>
 
         </nav>
     </header>
     <!--BANNER PRINCIPAL-->
     <section class="banner">
         <div class="hero-inner">
-            <img src="./img/WhatsApp Image 2026-10-30 at 16.42.12.jpeg">
-
-            </img>
+            <img src="./img/WhatsApp Image 2026-10-30 at 16.42.12.jpeg"
+                alt="Sala de aula da escola com carteiras e estante de livros" fetchpriority="high">
             <div class="banner-content">
-                <h1>Matrículas Abertas 2026 !!</h1>
-                <p>Venha fazer parte da nossa escola e garanta um futuro brilhante para o seu filho!</p>
-                <a href="#contato" class="btn-cta">Agende uma Visita
+                <h1>Dom Pedro I: educação que transforma</h1>
+                <p>Ensino Médio, Técnico, EJA e Centro de Línguas em um ambiente acolhedor e acessível.</p>
+                <a href="#contato" class="btn-cta">Entre em contato
                     <span>
                         ⭣
                     </span>
@@ -52,51 +49,181 @@
         </div>
     </section>
 
+    <!--AVISOS: o conteúdo vem do Google Planilhas (veja js/avisos.js).
+        Se não houver nenhum aviso ativo, esta faixa fica escondida sozinha.-->
+    <section id="avisos" class="avisos" aria-label="Avisos da escola" hidden></section>
+
+    <!--QUEM SOMOS-->
+    <section id="quem-somos" class="about-section">
+        <h2>Quem Somos</h2>
+        <div class="about-content">
+            <p>A Escola Estadual Dom Pedro I, em São Miguel Paulista (SP), oferece Ensino Médio, Ensino Técnico, EJA
+                e o Centro de Estudo de Línguas (CEL), com acessibilidade e estrutura de apoio ao aprendizado, como
+                laboratório de informática, quadras esportivas e sala de leitura.</p>
+            <!-- EDITE: acrescente aqui a história, a missão e os valores da escola -->
+        </div>
+    </section>
+
     <hr>
 
     <!--NÍVEIS DE ENSINO-->
     <section id="niveis" class="cards-section">
-        <h2>Nossos Níveis de Ensino</h2>
+        <h2>Níveis de Ensino e Programas</h2>
         <div class="cards-container">
             <!-- NOVO: data-modal indica qual janela abrir; role/tabindex permitem usar com o teclado -->
             <div class="card" data-modal="modal-tecnico" role="button" tabindex="0">
-                <span class="material-symbols-outlined icon">🧑‍🎓💻</span>
+                <span class="material-symbols-outlined icon"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M70.8-6.7c5.4-5.4 13.8-6.2 20.2-2L209.9 70.5c8.9 5.9 14.2 15.9 14.2 26.6l0 49.6 90.8 90.8c33.3-15 73.9-8.9 101.2 18.5L542.2 382.1c18.7 18.7 18.7 49.1 0 67.9l-60.1 60.1c-18.7 18.7-49.1 18.7-67.9 0L288.1 384c-27.4-27.4-33.5-67.9-18.5-101.2l-90.8-90.8-49.6 0c-10.7 0-20.7-5.3-26.6-14.2L23.4 58.9c-4.2-6.3-3.4-14.8 2-20.2L70.8-6.7zm145 303.5c-6.3 36.9 2.3 75.9 26.2 107.2l-94.9 95c-28.1 28.1-73.7 28.1-101.8 0s-28.1-73.7 0-101.8l135.4-135.5 35.2 35.1zM384.1 0c20.1 0 39.4 3.7 57.1 10.5 10 3.8 11.8 16.5 4.3 24.1L388.8 91.3c-3 3-4.7 7.1-4.7 11.3l0 41.4c0 8.8 7.2 16 16 16l41.4 0c4.2 0 8.3-1.7 11.3-4.7l56.7-56.7c7.6-7.5 20.3-5.7 24.1 4.3 6.8 17.7 10.5 37 10.5 57.1 0 43.2-17.2 82.3-45 111.1l-49.1-49.1c-33.1-33-78.5-45.7-121.1-38.4l-56.8-56.8 0-29.7-.2-5c-.8-12.4-4.4-24.3-10.5-34.9 29.4-35 73.4-57.2 122.7-57.3z" />
+                    </svg></span>
                 <h3>Ensino Técnico</h3>
                 <p>Excelente oportunidade para desenvolver conhecimentos práticos e conquistar uma formação que abre
                     portas para o futuro.</p>
-                <span class="ver-mais">Ver detalhes</span>
+                <span class="ver-mais" data-modal="modal-tecnico">Ver detalhes</span>
             </div>
 
             <div class="card" data-modal="modal-medio" role="button" tabindex="0">
-                <span class="material-symbols-outlined icon">🧑‍🎓🗺️</span>
+                <span class="material-symbols-outlined icon"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M48 195.8l209.2 86.1c9.8 4 20.2 6.1 30.8 6.1s21-2.1 30.8-6.1l242.4-99.8c9-3.7 14.8-12.4 14.8-22.1s-5.8-18.4-14.8-22.1L318.8 38.1C309 34.1 298.6 32 288 32s-21 2.1-30.8 6.1L14.8 137.9C5.8 141.6 0 150.3 0 160L0 456c0 13.3 10.7 24 24 24s24-10.7 24-24l0-260.2zm48 71.7L96 384c0 53 86 96 192 96s192-43 192-96l0-116.6-142.9 58.9c-15.6 6.4-32.2 9.7-49.1 9.7s-33.5-3.3-49.1-9.7L96 267.4z" />
+                    </svg></span>
                 <h3>Ensino Médio</h3>
                 <p>Foco na Preparação para as melhores universidades, Enem e carreira profissional.</p>
-                <span class="ver-mais">Ver detalhes</span>
+                <span class="ver-mais" data-modal="modal-medio">Ver detalhes</span>
             </div>
 
             <div class="card" data-modal="modal-eja" role="button" tabindex="0">
-                <span class="material-symbols-outlined icon">🧑‍🎓 📚</span>
+                <span class="material-symbols-outlined icon"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M256 152a88 88 0 1 0 0-176 88 88 0 1 0 0 176zm0 298.7l0-149.3c16.3-6.8 32.9-13.7 49.7-20.7 39-16.2 80.8-24.6 123.1-24.6l19.2 0 0 160-19.2 0c-59.1 0-117.7 11.7-172.3 34.5l-.5 .2zM256 232l-25.1-10.5C184.1 202 133.9 192 83.2 192L48 192c-26.5 0-48 21.5-48 48L0 432c0 26.5 21.5 48 48 48l35.2 0c50.7 0 100.9 10 147.7 29.5l12.8 5.3c7.9 3.3 16.7 3.3 24.6 0l12.8-5.3c46.8-19.5 97-29.5 147.7-29.5l35.2 0c26.5 0 48-21.5 48-48l0-192c0-26.5-21.5-48-48-48l-35.2 0c-50.7 0-100.9 10-147.7 29.5L256 232z" />
+                    </svg></span>
                 <h3>Educação de Jovens e Adultos (EJA)</h3>
                 <p>Uma nova oportunidade para retomar os estudos, concluir a educação básica e abrir portas no mercado
                     de trabalho.</p>
-                <span class="ver-mais">Ver detalhes</span>
+                <span class="ver-mais" data-modal="modal-eja">Ver detalhes</span>
+            </div>
+
+            <div class="card" data-modal="modal-cel" role="button" tabindex="0" style="border-color: var(--amarelo);">
+                <span class="material-symbols-outlined icon"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M160 0c17.7 0 32 14.3 32 32l0 32 128 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-9.6 0-8.4 23.1c-16.4 45.2-41.1 86.5-72.2 122 14.2 8.8 29 16.6 44.4 23.5l50.4 22.4 62.2-140c5.1-11.6 16.6-19 29.2-19s24.1 7.4 29.2 19l128 288c7.2 16.2-.1 35.1-16.2 42.2s-35.1-.1-42.2-16.2l-20-45-157.5 0-20 45c-7.2 16.2-26.1 23.4-42.2 16.2s-23.4-26.1-16.2-42.2l39.8-89.5-50.4-22.4c-23-10.2-45-22.4-65.8-36.4-21.3 17.2-44.6 32.2-69.5 44.7L78.3 380.6c-15.8 7.9-35 1.5-42.9-14.3s-1.5-35 14.3-42.9l34.5-17.3c16.3-8.2 31.8-17.7 46.4-28.3-13.8-12.7-26.8-26.4-38.9-40.9L81.6 224.7c-11.3-13.6-9.5-33.8 4.1-45.1s33.8-9.5 45.1 4.1l10.2 12.2c11.5 13.9 24.1 26.8 37.4 38.7 27.5-30.4 49.2-66.1 63.5-105.4l.5-1.2-210.3 0C14.3 128 0 113.7 0 96S14.3 64 32 64l96 0 0-32c0-17.7 14.3-32 32-32zM416 270.8L365.7 384 466.3 384 416 270.8z" />
+                    </svg>
+                </span>
+                <h3>Centro de Línguas (CEL)</h3>
+                <p>O Centro de Estudo de Línguas (CEL) oferece aos alunos da rede estadual cursos gratuitos de idiomas,
+                    promovendo o aprendizado de novas línguas, o contato com diferentes culturas e a ampliação de
+                    oportunidades profissionais.</p>
+                <span class="ver-mais" data-modal="modal-cel">Ver detalhes</span>
             </div>
 
         </div> <!-- CORRIGIDO: faltava fechar a div cards-container -->
     </section>
     <hr>
     <!-- Infraestrutura -->
-    <section class="section-Infra">
+    <section id="infra" class="section-Infra">
+        <h2>Infraestrutura</h2>
         <div class="container-Infra">
 
             <div class="card-infra">
                 <div class="card-img">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M0 192c0-35.3 28.7-64 64-64l64 0 127.9-115.1c18.3-16.4 46-16.4 64.2 0L448 128 512 128c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 192zM224 376l0 88 128 0 0-88c0-22.1-17.9-40-40-40l-48 0c-22.1 0-40 17.9-40 40zm-112 8c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0zm16-144l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16zM496 384c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0zm16-144l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16zM288 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z" />
+                    </svg>
                 </div>
-                <h3>Sala de aula: </h3>
-                <h2>12</h2>
+                <h3>Escola com acessibilidade </h3>
 
             </div>
-            
+
+            <div class="card-infra">
+                <div class="card-img">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M136 40a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zM117.9 197.6l12.6 63c-38.6 12.4-66.5 48.7-66.5 91.4 0 53 43 96 96 96 35.6 0 66.7-19.4 83.3-48.2 2.3 .1 4.6 .2 7 .2l4.1 0c1 0 2.1 0 3.1 0l55.2 0c-20.4 64.9-81 112-152.7 112-88.4 0-160-71.6-160-160 0-73.8 50-135.9 117.9-154.4zm148.6-28.1l23.7 118.5 60.5 0c33.3 0 63.2 20.7 74.9 51.9l25.5 68 18.7-6.2c16.8-5.6 34.9 3.5 40.5 20.2s-3.5 34.9-20.2 40.5l-48 16c-16.3 5.4-34-3-40.1-19.1l-36.3-96.9c-2.3-6.2-8.3-10.4-15-10.4l-86.1 0c-.4 0-.8 0-1.3 0l-13.1 0c-30.5 0-56.8-21.5-62.8-51.4L165.3 189.7c-6.4-31.9 18-61.7 50.6-61.7 24.6 0 45.8 17.4 50.6 41.5z" />
+                    </svg>
+                </div>
+                <h3>Rampa de acessibilidade </h3>
+
+            </div>
+
+            <div class="card-infra">
+                <div class="card-img">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 640 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M80 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm40 304l0 128c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-154.8c-8.1 9.2-21.1 13.2-33.5 9.4-16.9-5.3-26.3-23.2-21-40.1l29.7-95.2C44.4 156.9 83.6 128 128 128s83.6 28.9 96.8 71.2l29.7 95.2c5.3 16.9-4.1 34.8-21 40.1-12.4 3.9-25.4-.2-33.5-9.4L200 480c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-128-16 0zM320 0c13.3 0 24 10.7 24 24l0 464c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-464c0-13.3 10.7-24 24-24zM464 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zM440 480l0-96-17.8 0c-10.9 0-18.6-10.7-15.2-21.1l9-26.9c-3.2 0-6.4-.5-9.5-1.5-16.9-5.3-26.3-23.2-21-40.1l29.7-95.2C428.4 156.9 467.6 128 512 128s83.6 28.9 96.8 71.2l29.7 95.2c5.3 16.9-4.1 34.8-21 40.1-3.2 1-6.4 1.5-9.5 1.5l9 26.9c3.5 10.4-4.3 21.1-15.2 21.1l-17.8 0 0 96c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-96-16 0 0 96c0 17.7-14.3 32-32 32s-32-14.3-32-32z" />
+                    </svg>
+                </div>
+                <h3>Sanitários com acessibilidade</h3>
+
+            </div>
+
+            <div class="card-infra">
+                <div class="card-img">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M348.8 32C340.7 46.1 336 62.5 336 80l0 16-272 0 0 224 272 0 0 64-272 0c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l284.8 0zM336 432c0 17.5 4.7 33.9 12.8 48L120 480c-13.3 0-24-10.7-24-24s10.7-24 24-24l216 0zM432 32l96 0c26.5 0 48 21.5 48 48l0 352c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-352c0-26.5 21.5-48 48-48zm24 64c-13.3 0-24 10.7-24 24s10.7 24 24 24l48 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-48 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l48 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-48 0zm56 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z" />
+                    </svg>
+                </div>
+                <h3>Láb. de Informática </h3>
+
+            </div>
+
+            <div class="card-infra">
+                <div class="card-img">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M92.7 58.8l78.4 78.4c18.2-25 28.9-55.9 28.9-89.2 0-14.1-1.9-27.7-5.5-40.6-38 9.4-72.6 27.2-101.8 51.4zM58.8 92.7c-24.2 29.2-42 63.8-51.4 101.8 12.9 3.6 26.5 5.5 40.6 5.5 33.3 0 64.1-10.7 89.2-28.9L58.8 92.7zM256 0c-4.6 0-9.2 .1-13.7 .4 3.7 15.3 5.7 31.2 5.7 47.6 0 46.6-15.9 89.4-42.6 123.4L256 222.1 419.3 58.8C374.9 22.1 318.1 0 256 0zM48 248c-16.4 0-32.4-2-47.6-5.7-.2 4.5-.4 9.1-.4 13.7 0 62.1 22.1 118.9 58.8 163.3L222.1 256 171.4 205.4C137.4 232.1 94.6 248 48 248zm463.6 21.7c.2-4.5 .4-9.1 .4-13.7 0-62.1-22.1-118.9-58.8-163.3L289.9 256 340.6 306.6c34-26.7 76.9-42.6 123.4-42.6 16.4 0 32.4 2 47.6 5.7zm-7.1 47.8c-12.9-3.6-26.5-5.5-40.6-5.5-33.3 0-64.1 10.7-89.2 28.9l78.4 78.4c24.2-29.2 42-63.8 51.4-101.8zM340.9 374.8c-18.2 25-28.9 55.9-28.9 89.2 0 14.1 1.9 27.7 5.5 40.6 38-9.4 72.6-27.2 101.8-51.4l-78.4-78.4zm-34.3-34.3L256 289.9 92.7 453.2c44.3 36.7 101.2 58.8 163.3 58.8 4.6 0 9.2-.1 13.7-.4-3.7-15.3-5.7-31.2-5.7-47.6 0-46.6 15.9-89.4 42.6-123.4z" />
+                    </svg>
+                </div>
+                <h3>Quadras esportivas
+                    <strong>Aberta e Coberta</strong>
+                </h3>
+
+            </div>
+            <div class="card-infra">
+                <div class="card-img">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M384 512L96 512c-53 0-96-43-96-96L0 96C0 43 43 0 96 0L400 0c26.5 0 48 21.5 48 48l0 288c0 20.9-13.4 38.7-32 45.3l0 66.7c17.7 0 32 14.3 32 32s-14.3 32-32 32l-32 0zM96 384c-17.7 0-32 14.3-32 32s14.3 32 32 32l256 0 0-64-256 0zm32-232c0 13.3 10.7 24 24 24l176 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-176 0c-13.3 0-24 10.7-24 24zm24 72c-13.3 0-24 10.7-24 24s10.7 24 24 24l176 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-176 0z" />
+                    </svg>
+                </div>
+                <h3>Sala de Leitura </h3>
+
+            </div>
+
+            <div class="card-infra">
+                <div class="card-img">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M40 24A56 56 0 1 1 152 24 56 56 0 1 1 40 24zm51.1 88c23.5 0 45.5 11.3 59.1 30.4l48.7 68.2c6 8.4 15.7 13.4 26 13.4l31.1 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-31.1 0c-31 0-60.1-15-78.1-40.2l-2.8-3.9 0 80.1 41.6 31.2C209.8 373.3 224 401.8 224 432l0 80c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-80c0-10.1-4.7-19.6-12.8-25.6L70.4 348.8C46.2 330.7 32 302.2 32 272l0-100.9C32 138.5 58.5 112 91.1 112zM32 512l0-132.7c3.1 2.7 6.3 5.4 9.6 7.9L96 428 96 512c0 17.7-14.3 32-32 32s-32-14.3-32-32zm544-88l0 96c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-72-168 0c-7.1 0-13.8-3.1-18.4-8.6s-6.5-12.6-5.3-19.6l30.7-176.7-63.1-137.6 0 72c-5.2-1-10.5-1.6-16-1.6l-32 0 0-120c0-30.9 25.1-56 56-56L520 0c30.9 0 56 25.1 56 56l0 368zM288 336c5.5 0 10.8-.6 16-1.6L304 520c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-184 32 0z" />
+                    </svg>
+                </div>
+                <h3>Auditório </h3>
+
+            </div>
+
+            <div class="card-infra">
+                <div class="card-img">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M63.9 14.4C63.1 6.2 56.2 0 48 0s-15.1 6.2-16 14.3L17.9 149.7c-1.3 6-1.9 12.1-1.9 18.2 0 45.9 35.1 83.6 80 87.7L96 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-224.4c44.9-4.1 80-41.8 80-87.7 0-6.1-.6-12.2-1.9-18.2L223.9 14.3C223.1 6.2 216.2 0 208 0s-15.1 6.2-15.9 14.4L178.5 149.9c-.6 5.7-5.4 10.1-11.1 10.1-5.8 0-10.6-4.4-11.2-10.2L143.9 14.6C143.2 6.3 136.3 0 128 0s-15.2 6.3-15.9 14.6L99.8 149.8c-.5 5.8-5.4 10.2-11.2 10.2-5.8 0-10.6-4.4-11.1-10.1L63.9 14.4zM448 0C432 0 320 32 320 176l0 112c0 35.3 28.7 64 64 64l32 0 0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-448c0-17.7-14.3-32-32-32z" />
+                    </svg>
+                </div>
+                <h3>Refeitório e Cantina </h3>
+
+            </div>
         </div>
     </section>
 
@@ -105,158 +232,123 @@
     <!-- CONTATO-->
     <section id="contato" class="contact-section">
         <h2>Fale Conosco</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Seu Nome Completo" required>
-            <input type="email" placeholder="Seu E-mail" required>
-            <input type="tel" placeholder="Seu Telefone / WhatsApp" required>
-            <select required>
-                <option value="">Interesse em qual série?</option>
-                <option value="Infantil">Educação Infantil</option>
-                <option value="EJA">EJA</option>
-                <option value="medio">Ensino Médio</option>
-            </select>
-            <button type="submit" class="btn-submit"> Enviar solicitação</button>
-        </form>
+
+        <div class="contact-form">
+            <p class="info-contact">
+
+                <span class="contact-text">
+                    <svg fill="var(--amarelo)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                        <!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z" />
+                    </svg> Email: E002914A@EDUCACAO.SP.GOV.BR
+                </span>
+
+                <a href="mailto:E002914A@EDUCACAO.SP.GOV.BR">
+                    <span class="arrow-right">
+                        <svg fill="var(--amarelo)" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path
+                                d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm41-159c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l39-39-150.1 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l150.1 0-39-39c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l80 80c9.4 9.4 9.4 24.6 0 33.9l-80 80z" />
+                        </svg>
+
+                    </span>
+                </a>
+            </p>
+
+            <p class="info-contact">
+                <span class="contact-text">
+                    <svg fill="var(--amarelo)" aria-hidden="true" focusable="false" class="icon"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em">
+                        <!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                        <path
+                            d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z" />
+                    </svg> Telefone: (11) 2297- 8204
+                </span>
+                <a href="tel:+551122978204">
+                    <span class="arrow-right">
+                        <svg fill="var(--amarelo)" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path
+                                d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm41-159c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l39-39-150.1 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l150.1 0-39-39c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l80 80c9.4 9.4 9.4 24.6 0 33.9l-80 80z" />
+                        </svg>
+
+                    </span>
+                </a>
+
+            </p>
+
+            <p class="info-contact">
+                <span class="contact-text">
+                    <svg fill="var(--amarelo)" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M194.4 211.7a53.3 53.3 0 1 0 59.2 88.6 53.3 53.3 0 1 0 -59.2-88.6zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12-18.1-7.1-57.6-6.8-83.1-6.5-4.1 0-7.9 .1-11.2 .1s-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2 0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2 2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5 4.1 0 7.9-.1 11.2-.1s7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5 6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83 0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83-2.7-6.9-6.8-13.1-12-18.4l0 .2zm-67.1 44.5c18.1 12.1 30.6 30.9 34.9 52.2s-.2 43.5-12.3 61.6c-6 9-13.7 16.6-22.6 22.6s-19 10.1-29.6 12.2c-21.3 4.2-43.5-.2-61.6-12.3s-30.6-30.9-34.9-52.2 .2-43.5 12.2-61.6 30.9-30.6 52.2-34.9 43.5 .2 61.6 12.2l.1 0zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1 2.6-7.1 5.2-9.8 6.1-4.5 9.8-5.2 7.6-.4 11.1 1.1 6.5 3.9 8.6 7 3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2-3.9 3.2-6.2 4.2-4.8 1.5-7.3 1.5c-3.8 0-7.5-1.1-10.6-3.2l-.1 0zM448 96c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320zM357 389c-18.7 18.7-41.4 24.6-67 25.9-26.4 1.5-105.6 1.5-132 0-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132 1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0 25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9-1.3 25.6-7.1 48.3-25.8 67l0 .1z" />
+                    </svg>
+                    Instagram: @eedompedro1oficial
+                </span>
+
+                <span class="arrow-right">
+                    <a href="https://www.instagram.com/eedompedro1oficial/" target="_blank" rel="noopener noreferrer">
+                        <svg fill="var(--amarelo)" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path
+                                d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm41-159c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l39-39-150.1 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l150.1 0-39-39c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l80 80c9.4 9.4 9.4 24.6 0 33.9l-80 80z" />
+                        </svg>
+                    </a>
+
+                </span>
+
+            </p>
+
+
+            <p class="info-contact">
+                <span class="contact-text">
+                    <svg fill="var(--amarelo)" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                            d="M576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 440 146.7 540.8 258.2 568.5L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 574.1C477.8 558.8 576 450.9 576 320z" />
+                    </svg>
+                    Facebook: Escola estadual Dom Pedro I   
+                </span>
+
+                <span class="arrow-right">
+                    <a href="https://www.facebook.com/dompedrovirtual?mibextid=ZbWKwL&utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" rel="noopener noreferrer">
+                        <svg fill="var(--amarelo)" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path
+                                d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm41-159c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l39-39-150.1 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l150.1 0-39-39c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l80 80c9.4 9.4 9.4 24.6 0 33.9l-80 80z" />
+                        </svg>
+                    </a>
+
+                </span>
+
+            </p>
+
+        </div>
     </section>
 
     <!--RODAPÉ-->
     <footer class="footer">
         <p>&copy; 2026 Escola Dom Pedro I. Todos os direitos reservados. </p>
-        <p>Endereço: Rua Américo Gomes da Costa, 59  - São Miguel Paulista - SP</p>
+        <p>Endereço: Rua Américo Gomes da Costa, 59 - São Miguel Paulista - SP</p>
         <div class="area-restrita">
-            <span>área restrita</span>
+            <span data-modal="aluno" role="button" tabindex="0">área restrita</span>
         </div>
     </footer>
 
     <!--BOTÃO FLUTUANTE WHATSAPP-->
-    <a href="https://wa.me" class="btn-whatsapp" target="_blank" aria-label="Fale Conosco no Whatsapp">
+    <!-- EDITE: troque pelo número real do WhatsApp da escola, no formato https://wa.me/55DDDNUMERO -->
+    <a href="https://wa.me" class="btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Fale Conosco no Whatsapp">
         💬
     </a>
-    <!--Incluir essa parte do código-->
-    <!--ÁREA DO ALUNO -->
-    <div id="modal-aluno" class="modal"> <!-- Cria a janela da Área do Aluno -->
+    <div id="modais-container"></div>
 
-        <div class="modal-conteudo"> <!-- Conteúdo que fica dentro da janela -->
-
-            <span id="fechar-modal" class="fechar">&times;</span> <!-- Botão X para fechar o modal -->
-
-            <h2>Área do Aluno</h2> <!-- Título da janela -->
-
-            <input type="text" id="usuario" placeholder="Digite seu usuário"> <!-- Campo para digitar o usuário -->
-
-            <input type="password" id="senha" placeholder="Digite sua senha"> <!-- Campo para digitar a senha -->
-
-            <button id="btn-entrar" type="button"> <!-- Botão para entrar -->
-                Entrar
-            </button>
-
-        </div>
-
-    </div>
-
-    <!--
-      =====================================================
-      NOVO: JANELAS (MODAIS) DOS TIPOS DE ENSINO
-      Edite os textos com os dados reais da escola (marcados com EDITE)
-      =====================================================
-    -->
-
-    <dialog id="modal-tecnico" class="modal-ensino" aria-labelledby="modal-tecnico-t">
-        <div class="me-topo">
-            <h3 id="modal-tecnico-t">Ensino Técnico</h3>
-            <button type="button" class="me-fechar" aria-label="Fechar">&times;</button>
-        </div>
-        <div class="me-corpo">
-            <p class="me-aviso">Os cursos técnicos são oferecidos a partir do <strong>2º ano</strong> do Ensino Médio.
-            </p>
-            <!-- NOVO: botões de filtro. data-filtro deve ser igual ao data-curso da área correspondente -->
-            <div class="me-filtros" role="group" aria-label="Filtrar por curso">
-                <button type="button" class="me-filtro ativo" data-filtro="todos" aria-pressed="true">Todos</button>
-                <button type="button" class="me-filtro" data-filtro="informatica"
-                    aria-pressed="false">Informática</button>
-                <button type="button" class="me-filtro" data-filtro="administracao"
-                    aria-pressed="false">Administração</button>
-                <button type="button" class="me-filtro" data-filtro="enfermagem"
-                    aria-pressed="false">Enfermagem</button>
-            </div>
-
-            <!-- EDITE: uma área (me-curso) para cada curso. Copie e cole para adicionar outro,
-                 e crie também o botão correspondente acima -->
-            <div class="me-curso" data-curso="informatica">
-                <h4>Técnico em Informática</h4>
-                <ul>
-                    <li><strong>Período:</strong> Noite</li>
-                    <li><strong>Duração:</strong> 2 anos (2º e 3º ano)</li>
-                    <li><strong>Sobre o curso:</strong> Introdução à programação, redes e manutenção de computadores.
-                    </li>
-                </ul>
-            </div>
-
-            <div class="me-curso" data-curso="administracao">
-                <h4>Técnico em Administração</h4>
-                <ul>
-                    <li><strong>Período:</strong> Tarde</li>
-                    <li><strong>Duração:</strong> 2 anos (2º e 3º ano)</li>
-                    <li><strong>Sobre o curso:</strong> Rotinas administrativas, finanças, vendas e gestão de pessoas.
-                    </li>
-                </ul>
-            </div>
-
-            <div class="me-curso" data-curso="enfermagem">
-                <h4>Técnico em Enfermagem</h4>
-                <ul>
-                    <li><strong>Período:</strong> Noite</li>
-                    <li><strong>Duração:</strong> 2 anos (2º e 3º ano)</li>
-                    <li><strong>Sobre o curso:</strong> Cuidados básicos de saúde, primeiros socorros e biossegurança.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </dialog>
-
-    <dialog id="modal-medio" class="modal-ensino" aria-labelledby="modal-medio-t">
-        <div class="me-topo">
-            <h3 id="modal-medio-t">Ensino Médio</h3>
-            <button type="button" class="me-fechar" aria-label="Fechar">&times;</button>
-        </div>
-        <div class="me-corpo">
-            <h4>Período oferecido</h4>
-            <ul>
-                <li>Manhã: 7h30 às 12h30 <!-- EDITE --></li>
-            </ul>
-            <h4>Duração</h4>
-            <ul>
-                <li>3 anos (1ª a 3ª série) <!-- EDITE --></li>
-            </ul>
-        </div>
-    </dialog>
-
-    <dialog id="modal-eja" class="modal-ensino" aria-labelledby="modal-eja-t">
-        <div class="me-topo">
-            <h3 id="modal-eja-t">Educação de Jovens e Adultos (EJA)</h3>
-            <button type="button" class="me-fechar" aria-label="Fechar">&times;</button>
-        </div>
-        <div class="me-corpo">
-            <h4>Período oferecido</h4>
-            <ul>
-                <li>Noite: 19h às 22h30 <!-- EDITE --></li>
-            </ul>
-            <h4>Etapas</h4>
-            <ul>
-                <li>EJA Fundamental <!-- EDITE --></li>
-                <li>EJA Médio <!-- EDITE --></li>
-            </ul>
-            <h4>Para quem é</h4>
-            <ul>
-                <li>Jovens e adultos que não concluíram os estudos na idade regular.</li>
-            </ul>
-        </div>
-    </dialog>
     <script src="./js/script.js"></script> <!-- faz um link com o arquivo JavaScript -->
     <!-- no final do <body>, logo abaixo do script.js -->
     <script src="./js/modal-ensino.js"></script>
+    <!-- avisos da faixa abaixo do banner (Google Planilhas) -->
+    <script src="./js/avisos.js"></script>
 </body>
-
-</html>
 
 </html>

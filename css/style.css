@@ -7,6 +7,8 @@
 } Seletor → Propriedade → Valor */
 
 :root {
+
+    color-scheme: only light;
     /* Cores principais */
     --azul-marinho: #0a052e;
     --azul-claro: #0b1352;
@@ -17,10 +19,6 @@
     /* Cores neutras */
     --branco: #FFFFFF;
     --cinza-claro: #F3F5F7;
-
-    /* Cores para textos */
-    --texto-principal: #263238;
-    --texto-secundario: #667085;
 
     /* Cores de interação */
     --botao-hover: #D9A91E;

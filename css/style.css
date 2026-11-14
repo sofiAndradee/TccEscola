@@ -1,14 +1,8 @@
-/* CONFIGURAÇÕES GERAIS*/
 
-/* Exemplo:
-.card {
-    color: blue;
-    padding: 20px;
-} Seletor → Propriedade → Valor */
 
 :root {
 
-    color-scheme: only light;
+     color-scheme: only light;
     /* Cores principais */
     --azul-marinho: #0a052e;
     --azul-claro: #0b1352;
@@ -283,6 +277,21 @@ h2 {
         inset 0 1px 3px rgba(255, 255, 255, 0.55);
 
     transform: translateY(2px) scale(1.02);
+}
+
+.btn-cta span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.btn-cta svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+    fill: #0c2340;
+    flex-shrink: 0;
 }
 
 hr {
